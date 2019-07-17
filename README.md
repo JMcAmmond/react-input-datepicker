@@ -4,7 +4,7 @@
 
 [![NPM](https://img.shields.io/npm/v/react-input-datepicker.svg)](https://www.npmjs.com/package/react-input-datepicker) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-A simple and reusable input datepicker component for React 
+A simple and reusable input datepicker component for React ([Demo](https://jeffmcammond.com/react-input-datepicker/))
 
 ![Input Datepicker](https://github.com/jmcammond/react-input-datepicker/raw/master/example/assets/input-datepicker.png "Input Datepicker")
 
