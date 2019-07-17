@@ -24,7 +24,7 @@ const Header = styled.header`
   text-align: center;
   color: #333;
   margin-bottom: 1rem;
-  margin-top: 4rem;
+  margin-top: 2rem;
 `;
 
 export { Label, H3, Header }

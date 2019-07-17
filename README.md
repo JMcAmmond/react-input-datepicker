@@ -8,11 +8,6 @@ A simple and reusable input datepicker component for React ([Demo](https://jeffm
 
 ![Input Datepicker](https://github.com/jmcammond/react-input-datepicker/raw/master/example/assets/input-datepicker.png "Input Datepicker")
 
-## TODO:
-  - Write unit tests
-  - Write component config
-  - Add type definitions
-
 ## Install
 
 ```bash
@@ -54,6 +49,21 @@ class Example extends Component {
   }
 }
 ```
+
+## Available Props
+
+| Prop           | Type    | Default                                   | Options     |
+|----------------|---------|-------------------------------------------|-------------|
+| value          | Date    | -                                         | -           |
+| minDate        | Date    | -                                         | -           |
+| maxDate        | Date    | -                                         | -           |
+| maxDateMessage | string  | 'Date must be less than {maxDate + 1}'    | -           |
+| minDateMessage | string  | 'Date must be greater than {minDate - 1}' | -           |
+| invalidMessage | string  | 'Not a valid date'                        | -           |
+| showLabels     | boolean | true                                      | true, false |
+| showErrors     | boolean | true                                      | true, false |
+| onDateChange   | func    | -                                         | -           |
+| format         | string  | 'month/day/year'                          | 'day/month/year', 'day/year/month', 'month/day/year', 'month/year/day', 'year/month/day', 'year/day/month' |
 
 ## License
 

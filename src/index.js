@@ -62,7 +62,6 @@ export default class InputDatepicker extends Component {
    */
   validate = () => {
     const { day, month, year } = this.state
-    // const { minDate, maxDate } = this.props
 
     // Must contain values
     if (!day || !month || !year) {

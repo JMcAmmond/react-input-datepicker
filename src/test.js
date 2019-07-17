@@ -1,7 +1,7 @@
-import ExampleComponent from './'
+import InputDatepicker from './'
 
-describe('ExampleComponent', () => {
+describe('InputDatepicker', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(InputDatepicker).toBeTruthy()
   })
 })
