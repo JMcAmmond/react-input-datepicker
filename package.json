@@ -1,7 +1,7 @@
 {
   "name": "react-input-datepicker",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "A simple and reusable input datepicker component for React",
   "author": "JMcAmmond",
   "license": "MIT",
   "repository": "JMcAmmond/react-input-datepicker",
