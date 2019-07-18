@@ -2,10 +2,10 @@ import moment from 'moment'
 
 /**
  * Determine id provided date is a valid date and falls between date range
- * @param {String} day
- * @param {String} month
- * @param {String} year
- * @param {Object} props
+ * @param {string} day
+ * @param {string} month
+ * @param {string} year
+ * @param {object} props
  */
 const isValidDate = (day, month, year, props) => {
   const userDate = buildDateFromInput(day, month, year)
@@ -36,9 +36,9 @@ const isValidDate = (day, month, year, props) => {
 
 /**
  * Build a moment date from input
- * @param {String} day
- * @param {String} month
- * @param {String} year
+ * @param {string} day
+ * @param {string} month
+ * @param {string} year
  */
 const buildDateFromInput = (day, month, year) => {
   const date = moment(`${day}/${month}/${year}`, 'D/M/YYYY', true)

@@ -41,7 +41,7 @@ class Example extends Component {
         <InputDatepicker
           value={this.state.value}
           onDateChange={this.onDateChange}
-          minDate={new Date('01-01-1900')}
+          minDate={new Date(1900, 0, 1)}
           maxDate={new Date()}
         />
       </div>

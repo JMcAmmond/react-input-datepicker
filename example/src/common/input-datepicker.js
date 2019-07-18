@@ -27,6 +27,13 @@ const StyledInputDatepicker = styled(InputDatepicker)`
         &.has-error {
           border: 2px solid #f97474;
         }
+
+        &::-webkit-inner-spin-button, 
+        &::-webkit-outer-spin-button { 
+          -webkit-appearance: none; 
+          margin: 0; 
+        }
+        -moz-appearance:textfield;
       }
     }
 
