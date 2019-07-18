@@ -116,68 +116,27 @@ export default class InputDatepicker extends Component {
    */
   getDateFormat = (value) => {
     const format = {
-      day: this.renderDayContainer(),
-      month: this.renderMonthContainer(),
-      year: this.renderYearContainer()
+      day: this.renderDateContainer('rid_day-container', 'day', 'Day', this.state.day),
+      month: this.renderDateContainer('rid_month-container', 'month', 'Month', this.state.month),
+      year: this.renderDateContainer('rid_year-container', 'year', 'Year', this.state.year)
     }
 
     return format[value]
   }
 
   /**
-   * Day date container
+   * Renders a date container element
    */
-  renderDayContainer = () => {
+  renderDateContainer = (className, id, label, value) => {
     return (
-      <div className={`rid_day-container ${styles.flexColumn}`}>
-        {this.props.showLabels ? <label htmlFor='day'>Day</label> : null}
+      <div className={`${className} ${styles.flexColumn}`}>
+        {this.props.showLabels ? <label htmlFor={id}>{label}</label> : null}
         <input
           className={`${this.state.hasError ? 'has-error' : ''}`}
           type='number'
-          id='day'
-          name='day'
-          value={this.state.day}
-          onChange={this.onInputChange}
-          onBlur={this.validate}
-        />
-      </div>
-    )
-  }
-
-  /**
-   * Month date container
-   */
-  renderMonthContainer = () => {
-    return (
-      <div className={`rid_month-container ${styles.flexColumn}`}>
-        {this.props.showLabels ? <label htmlFor='month'>Month</label> : null}
-        <input
-          className={`${this.state.hasError ? 'has-error' : ''}`}
-          type='number'
-          id='month'
-          name='month'
-          value={this.state.month}
-          onChange={this.onInputChange}
-          onBlur={this.validate}
-        />
-      </div>
-    )
-  }
-
-  /**
-   * Year date container
-   */
-  renderYearContainer = () => {
-    return (
-      <div className={`rid_year-container ${styles.flexColumn}`}>
-        {this.props.showLabels ? <label htmlFor='year'>Year</label> : null}
-        <input
-          className={`${this.state.hasError ? 'has-error' : ''}`}
-          type='number'
-          id='year'
-          name='year'
-          value={this.state.year}
-          min={1}
+          id={id}
+          name={id}
+          value={value}
           onChange={this.onInputChange}
           onBlur={this.validate}
         />
