@@ -9,7 +9,7 @@ export interface InputDatepickerProps {
   invalidMessage?: string;
   showLabels?: boolean;
   showErrors?: boolean;
-  onDateChange?: () => Date;
+  onDateChange?: (date: Date) => void;
   className?: string;
   format?: 'day/month/year' | 'day/year/month' | 'month/day/year' | 'month/year/day' | 'year/month/day' | 'year/day/month';
 }
