@@ -1,7 +1,7 @@
 import * as React from "react";
 
 export interface InputDatepickerProps {
-  value?: Date;
+  value?: Date | null;
   minDate?: Date;
   maxDate?: Date;
   maxDateMessage?: string;
@@ -9,7 +9,7 @@ export interface InputDatepickerProps {
   invalidMessage?: string;
   showLabels?: boolean;
   showErrors?: boolean;
-  onDateChange?: () => void;
+  onDateChange?: () => Date;
   className?: string;
   format?: 'day/month/year' | 'day/year/month' | 'month/day/year' | 'month/year/day' | 'year/month/day' | 'year/day/month';
 }
