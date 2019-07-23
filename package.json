@@ -1,6 +1,6 @@
 {
   "name": "react-input-datepicker",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A simple and reusable input datepicker component for React",
   "author": "JMcAmmond",
   "license": "MIT",
@@ -9,6 +9,14 @@
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
   "typings": "dist/index.d.ts",
+  "keywords": [
+    "reactjs",
+    "datepicker",
+    "react",
+    "datepicker-component",
+    "input",
+    "date"
+  ],
   "engines": {
     "node": ">=8",
     "npm": ">=5"
