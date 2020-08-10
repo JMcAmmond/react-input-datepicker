@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import InputDatepicker from 'react-input-datepicker';
 
-const StyledInputDatepicker = styled(InputDatepicker)`
+const StyledInputDatepicker: any = styled(InputDatepicker)`
   .rid_date-container {
     > div {
       margin-right: 15px;
@@ -28,12 +28,12 @@ const StyledInputDatepicker = styled(InputDatepicker)`
           border: 2px solid #f97474;
         }
 
-        &::-webkit-inner-spin-button, 
-        &::-webkit-outer-spin-button { 
-          -webkit-appearance: none; 
-          margin: 0; 
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
         }
-        -moz-appearance:textfield;
+        -moz-appearance: textfield;
       }
     }
 
@@ -53,7 +53,7 @@ const StyledInputDatepicker = styled(InputDatepicker)`
     margin-top: 6px;
     font-size: 0.9rem;
   }
-`
+`;
 
 const DateContainer = styled.div`
   display: flex;
@@ -66,4 +66,4 @@ const DateContainer = styled.div`
   }
 `;
 
-export { StyledInputDatepicker, DateContainer }
+export { StyledInputDatepicker, DateContainer };
