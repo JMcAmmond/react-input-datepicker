@@ -16,15 +16,14 @@ npm install --save react-input-datepicker
 
 ## Usage
 
-```jsx
+```tsx
 import React, { useState, useCallback } from 'react';
-
 import InputDatepicker from 'react-input-datepicker';
 
 export const App = () => {
-  const [value, setValue] = (useState < Date) | (null > null);
+  const [value, setValue] = useState<Date | null>(null);
 
-  const onDateChange = useCallback((date: any) => {
+  const onDateChange = useCallback((date: Date) => {
     setValue(date);
   }, []);
 

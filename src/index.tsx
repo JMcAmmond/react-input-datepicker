@@ -142,6 +142,7 @@ const InputDatepicker: React.FC<IInputDatePicker> = (props) => {
     if (value !== null && value !== buildDateFromInput(day, month, year)) {
       setDate(spreadDateToObject(value));
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props]);
 
   return (
