@@ -7,6 +7,7 @@ export interface IInputDatePicker {
   invalidMessage?: string;
   showLabels?: boolean;
   showErrors?: boolean;
+  showPlaceholders?: boolean;
   onDateChange: (date: Date) => void;
   className?: string;
   format?:

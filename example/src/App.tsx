@@ -1,68 +1,40 @@
-import React, { useState, useCallback } from 'react';
+import React from 'react';
+import Intro from './common/Intro';
+import Simple from './pages/Simple';
+import Labels from './pages/Labels';
+import DateRange from './pages/DateRange';
+import Order from './pages/Order';
+import Errors from './pages/Errors';
+import { useHashRouter, HashAnchor } from './hooks/useHashRouter';
+import { Navigation, Container, Content, Sticky } from './common/elements';
 
-import {
-  StyledInputDatepicker,
-  DateContainer,
-} from './common/input-datepicker';
-import { H3, Header } from './common/elements';
+const routes = {
+  '/': () => <Simple />,
+  '/labels': () => <Labels />,
+  '/date-range': () => <DateRange />,
+  '/format': () => <Order />,
+  '/errors': () => <Errors />,
+};
 
 const App = () => {
-  const [value, setValue] = useState<Date | null>(null);
-  const [maxValue, setMaxValue] = useState(new Date());
-  const [minValue, setMinValue] = useState(new Date(1956, 0, 1));
-
-  const onDateChange = useCallback((date: any) => {
-    setValue(date);
-  }, []);
-
-  const onMaxDateChange = useCallback((date: any) => {
-    setMaxValue(date);
-  }, []);
-
-  const onMinDateChange = useCallback((date: any) => {
-    setMinValue(date);
-  }, []);
+  const route = useHashRouter(routes);
 
   return (
-    <div>
-      <Header>React Input Datepicker</Header>
-
-      <H3>Standard</H3>
-      <DateContainer>
-        <StyledInputDatepicker value={value} onDateChange={onDateChange} />
-      </DateContainer>
-
-      <H3>Max Date</H3>
-      <DateContainer>
-        <StyledInputDatepicker
-          value={maxValue}
-          onDateChange={onMaxDateChange}
-          maxDate={new Date(1999, 11, 31)}
-        />
-      </DateContainer>
-
-      <H3>Min Date</H3>
-      <DateContainer>
-        <StyledInputDatepicker
-          value={minValue}
-          onDateChange={onMinDateChange}
-          minDate={new Date(2000, 0, 1)}
-        />
-      </DateContainer>
-
-      <H3>Custom Labels</H3>
-      <DateContainer>
-        <StyledInputDatepicker
-          value={value}
-          onDateChange={onDateChange}
-          labels={{
-            year: 'Año',
-            month: 'Mes',
-            day: 'Día',
-          }}
-        />
-      </DateContainer>
-    </div>
+    <>
+      <Intro />
+      <Container>
+        <Navigation>
+          <Sticky>
+            <HashAnchor href="/">Home</HashAnchor>
+            <HashAnchor href="/labels">Labels</HashAnchor>
+            <HashAnchor href="/date-range">Date Range</HashAnchor>
+            <HashAnchor href="/format">Date Format</HashAnchor>
+            <HashAnchor href="/errors">Errors</HashAnchor>
+          </Sticky>
+        </Navigation>
+        <Content>{route || <>Not Available</>}</Content>
+      </Container>
+    </>
   );
 };
 

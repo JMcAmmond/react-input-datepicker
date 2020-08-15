@@ -23,27 +23,29 @@ const StyledInputDatepicker: any = styled(InputDatepicker)`
         border-radius: 3px;
         border: none;
         text-align: center;
-
-        &.has-error {
-          border: 2px solid #f97474;
-        }
-
         &::-webkit-inner-spin-button,
         &::-webkit-outer-spin-button {
           -webkit-appearance: none;
           margin: 0;
         }
         -moz-appearance: textfield;
+
+        &.has-error {
+          border: 2px solid #f97474;
+        }
       }
     }
 
     .rid_day-container input {
+      cursor: pointer;
       width: 60px;
     }
     .rid_month-container input {
+      cursor: pointer;
       width: 60px;
     }
     .rid_year-container input {
+      cursor: pointer;
       width: 80px;
     }
   }

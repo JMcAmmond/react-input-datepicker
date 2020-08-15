@@ -57,6 +57,10 @@ const InputDatepicker: React.FC<IInputDatePicker> = (props) => {
   const validate = useCallback(() => {
     const { day, month, year } = date;
 
+    // Reset validation
+    setError('');
+    setHasError(false);
+
     // Must contain values
     if (!day || !month || !year) {
       onDateChange(null);
@@ -101,11 +105,18 @@ const InputDatepicker: React.FC<IInputDatePicker> = (props) => {
             value={value}
             onChange={onInputChange}
             onBlur={validate}
+            placeholder={props.showPlaceholders ? label : null}
           />
         </div>
       );
     },
-    [hasError, onInputChange, props.showLabels, validate],
+    [
+      hasError,
+      onInputChange,
+      props.showLabels,
+      props.showPlaceholders,
+      validate,
+    ],
   );
 
   /**
@@ -129,8 +140,6 @@ const InputDatepicker: React.FC<IInputDatePicker> = (props) => {
    * When ever the date state changes then clear errors and validate the date
    */
   useEffect(() => {
-    setError('');
-    setHasError(false);
     validate();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -169,6 +178,7 @@ InputDatepicker.defaultProps = {
   value: null,
   showLabels: true,
   showErrors: true,
+  showPlaceholders: true,
   format: 'month/day/year',
   className: '',
 };
